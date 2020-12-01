@@ -17,13 +17,18 @@ module.exports = {
     'comma-dangle': ['error', 'never'],
     'vue/max-attributes-per-line': ['error', { singleline: 5, multiline: { max: 1, allowFirstLine: false } }],
     'vue/singleline-html-element-content-newline': 'off',
-    'vue/require-default-prop': 'off'
+    'vue/require-default-prop': 'off',
+    'import/prefer-default-export': 'off',
+    'arrow-parens': ['error', 'as-needed']
   },
   overrides: [{
     files: [
       '**/__tests__/*.{j,t}s?(x)',
       '**/tests/unit/**/*.spec.{j,t}s?(x)'
     ],
+    rules:{
+      'import/first':'off'
+    },
     env: { jest: true }
   }]
 };
