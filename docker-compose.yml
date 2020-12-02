@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  walmart-assessment-backend:
+    container_name: walmart-assessment-backend
+    image: 'camilok14/walmart-assessment-backend'
+    ports:
+      - 3000:3000
+    environment:
+      - MONGODB_URI=mongodb+srv://walmart-assessment-backend:nvJHL4ZQMU7b5eh1@cluster0.nvptd.gcp.mongodb.net/walmart-assessment
+      - MONGODB_PRODUCTS_COLLECTION_NAME=products
+  walmart-assessment-frontend:
+    container_name: walmart-assessment-frontend
+    image: 'camilok14/walmart-assessment-frontend:local'
+    depends_on:
+      - walmart-assessment-backend
+    ports:
+      - 80:80
+
+    

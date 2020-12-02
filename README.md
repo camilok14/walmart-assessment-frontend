@@ -1,8 +1,18 @@
 # walmart-assessment-frontend
 
-## Run app with docker
-```
-sudo docker run -it -p 80:80 camilok14/walmart-assessment-frontend
+## Run app
+```bash
+# Deployed on heroku
+visit https://walmart-assessment-frontend.herokuapp.com/
+
+# Using docker compose to run frontend and backend
+$ sudo docker-compose up
+
+# From docker container, against backend deployed on Heroku
+$ sudo docker run -it -p 80:80 camilok14/walmart-assessment-frontend
+
+# From docker container, against backend running on docker container listening on port 3000 (used in docker-compose)
+$ sudo docker run -it -p 80:80 camilok14/walmart-assessment-frontend:local
 ```
 
 ## Project setup
@@ -31,6 +41,10 @@ npm run test:unit
 ```
 
 ### Run your end-to-end tests
-```
+```bash
+# With cypress UI
 npm run test:e2e
+
+# Console only
+npm run test:e2e -- --headless
 ```
