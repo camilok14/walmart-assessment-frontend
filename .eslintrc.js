@@ -19,7 +19,8 @@ module.exports = {
     'vue/singleline-html-element-content-newline': 'off',
     'vue/require-default-prop': 'off',
     'import/prefer-default-export': 'off',
-    'arrow-parens': ['error', 'as-needed']
+    'arrow-parens': ['error', 'as-needed'],
+    'max-len': ['error', { code: 200 }]
   },
   overrides: [{
     files: [
