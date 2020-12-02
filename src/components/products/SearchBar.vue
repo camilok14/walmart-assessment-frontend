@@ -1,7 +1,14 @@
 <template>
   <div class="navbar">
     <b-field>
-      <b-input v-model="auxValue" type="search" icon="magnify" :placeholder="label" rounded />
+      <b-input
+        :id="id"
+        v-model="auxValue"
+        type="search"
+        icon="magnify"
+        :placeholder="label"
+        rounded
+      />
     </b-field>
   </div>
 </template>
@@ -9,7 +16,8 @@
 export default {
   props: {
     label: { type: String, default: '' },
-    value: { type: String, default: '' }
+    value: { type: String, default: '' },
+    id: { type: String, default: '' }
   },
   data() {
     return {

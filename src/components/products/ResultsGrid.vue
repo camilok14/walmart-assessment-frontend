@@ -1,5 +1,5 @@
 <template>
-  <div class="columns is-multiline is-centered row">
+  <div id="products-grid" class="columns is-multiline is-centered row">
     <div
       v-for="product in value"
       :key="product.id"
@@ -14,14 +14,14 @@
         <div class="card-content">
           <div class="media">
             <div class="media-content">
-              <p class="title is-4">{{ product.brand }}</p>
-              <p class="subtitle is-6">{{ formatToCLP(product.price) }}</p>
+              <p :id="`product-${product.id}-brand`" class="title is-4">{{ product.brand }}</p>
+              <p :id="`product-${product.id}-price`" class="subtitle is-6">{{ formatToCLP(product.price) }}</p>
             </div>
           </div>
           <div class="content">
             <table>
-              <tr><td>{{ product.description }}</td></tr>
-              <tr><td><strong>Id: </strong>{{ product.id }}</td></tr>
+              <tr><td :id="`product-${product.id}-description`">{{ product.description }}</td></tr>
+              <tr><td :id="`product-${product.id}-id`"><strong>Id: </strong>{{ product.id }}</td></tr>
             </table>
           </div>
         </div>

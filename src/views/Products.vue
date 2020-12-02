@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SearchBar v-model="searchString" />
+    <SearchBar id="search-input" v-model="searchString" />
     <ResultsGrid v-if="!isLoading && !isError" v-model="products" />
     <div v-if="isLoading || isError" class="columns is-centered">
       <div class="column is-3">
