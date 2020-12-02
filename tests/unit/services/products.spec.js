@@ -15,7 +15,7 @@ describe('services/products', () => {
     expect(requestInstance.get).toHaveBeenCalledWith(
       'products',
       {
-        params: { searchString: 'searchString' },
+        params: { searchString: 'searchstring' },
         cancelToken: new CancelTokenMock(() => {})
       }
     );
