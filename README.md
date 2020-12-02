@@ -40,6 +40,11 @@ npm run build
 npm run test:unit
 ```
 
+### Get unit tests coverage
+```
+npm run test:cov
+```
+
 ### Run your end-to-end tests
 ```bash
 # With cypress UI

@@ -15,7 +15,12 @@
           <div class="media">
             <div class="media-content">
               <p :id="`product-${product.id}-brand`" class="title is-4">{{ product.brand }}</p>
-              <p :id="`product-${product.id}-price`" class="subtitle is-6">{{ formatToCLP(product.price) }}</p>
+              <p v-if="product.priceWithDiscount" :id="`product-${product.id}-price-with-discount`" class="subtitle is-6 discount">
+                Oferta: {{ formatToCLP(product.priceWithDiscount) }}
+              </p>
+              <p :id="`product-${product.id}-price`" class="subtitle is-6">
+                {{ product.priceWithDiscount ? 'Precio normal: ':'' }}{{ formatToCLP(product.price) }}
+              </p>
             </div>
           </div>
           <div class="content">
@@ -56,6 +61,10 @@ export default {
 <style scoped>
 .row {
   padding: 1%;
+}
+.discount{
+  color: blue;
+  font-weight: bold;
 }
 
 </style>
