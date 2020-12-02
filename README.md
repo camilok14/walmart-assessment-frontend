@@ -1,8 +1,18 @@
 # walmart-assessment-frontend
 
+## Run app with docker
+```
+sudo docker run -it -p 80:80 camilok14/walmart-assessment-frontend
+```
+
 ## Project setup
 ```
 npm install
+```
+
+### Configure backend endpoint
+```
+echo "VUE_APP_BACKEND_URL='https://walmart-assessment-backend.herokuapp.com/'" > .env
 ```
 
 ### Compiles and hot-reloads for development
@@ -24,11 +34,3 @@ npm run test:unit
 ```
 npm run test:e2e
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
